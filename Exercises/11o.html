@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      // let array = ['hello','world','search','search'];
+      // let index = -1;
+      // for(let i = 0;i<array.length;i++){
+      //     if(array[i] === 'search'){
+      //       index = i;
+      //       break;
+      //     }
+      // }
+      // console.log(index);
+
+      // array = ['not','found']
+      // index = -1;
+      // for(let i = 0;i<array.length;i++){
+      //   if(array[i] === 'search'){
+      //     index = i;
+      //     break;
+      //   }
+      // }
+      // console.log(index);
+
+      // function findIndex(array,word){
+      //   let index = -1;
+      //    for(let i = 0;i<array.length;i++){
+      //       if(array[i] === word){
+      //           return i;
+              
+      //       }
+      //    }
+      //    return -1;
+      // }
+      // console.log(findIndex(['green','red','blue','red'],'red'));
+
+      // 11r
+      function removeEgg(foods){
+        const copiedfoods = foods.slice();
+        const reversedFoods = copiedfoods.reverse();
+        const result = [];
+        let eggsRemoved = 0;
+        
+          for(let i = 0;i<reversedFoods.length;i++){
+            
+            if(reversedFoods[i] === 'egg' && eggsRemoved<2){
+              eggsRemoved++;
+              continue;
+            }
+              result.push(reversedFoods[i]); 
+          }
+            result.reverse();
+          console.log(result);
+          console.log(foods);
+      }
+      removeEgg(['egg','apple','egg','egg','ham']);
+    
+
+    </script>
+  </body>
+</html>
